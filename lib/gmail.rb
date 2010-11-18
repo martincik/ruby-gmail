@@ -1,8 +1,6 @@
 require 'net/imap'
 
 class Gmail
-  VERSION = '0.0.9'
-
   class NoLabel < RuntimeError; end
 
   ##################################
