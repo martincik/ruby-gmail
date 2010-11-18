@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{laco-ruby-gmail}
-  s.version = "0.2.1"
+  s.version = "0.2.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["BehindLogic", "Ladislav Martincik"]
@@ -24,11 +24,11 @@ Gem::Specification.new do |s|
     "README.markdown",
     "Rakefile",
     "VERSION",
+    "laco-ruby-gmail.gemspec",
     "lib/gmail.rb",
     "lib/gmail/mailbox.rb",
     "lib/gmail/message.rb",
     "lib/smtp_tls.rb",
-    "ruby-gmail.gemspec",
     "test/test_gmail.rb",
     "test/test_helper.rb"
   ]
@@ -53,16 +53,25 @@ Support me in making new and better gems:[0m [31;4mhttp://pledgie.com/campaign
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
       s.add_runtime_dependency(%q<jeweler>, [">= 0"])
       s.add_runtime_dependency(%q<shared-mime-info>, [">= 0"])
+      s.add_runtime_dependency(%q<mime>, [">= 0"])
+      s.add_runtime_dependency(%q<mail>, ["~> 2.2.1"])
+      s.add_runtime_dependency(%q<shared-mime-info>, [">= 0"])
       s.add_runtime_dependency(%q<mail>, [">= 2.2.1"])
       s.add_runtime_dependency(%q<mime>, [">= 0.1"])
     else
       s.add_dependency(%q<jeweler>, [">= 0"])
+      s.add_dependency(%q<shared-mime-info>, [">= 0"])
+      s.add_dependency(%q<mime>, [">= 0"])
+      s.add_dependency(%q<mail>, ["~> 2.2.1"])
       s.add_dependency(%q<shared-mime-info>, [">= 0"])
       s.add_dependency(%q<mail>, [">= 2.2.1"])
       s.add_dependency(%q<mime>, [">= 0.1"])
     end
   else
     s.add_dependency(%q<jeweler>, [">= 0"])
+    s.add_dependency(%q<shared-mime-info>, [">= 0"])
+    s.add_dependency(%q<mime>, [">= 0"])
+    s.add_dependency(%q<mail>, ["~> 2.2.1"])
     s.add_dependency(%q<shared-mime-info>, [">= 0"])
     s.add_dependency(%q<mail>, [">= 2.2.1"])
     s.add_dependency(%q<mime>, [">= 0.1"])
